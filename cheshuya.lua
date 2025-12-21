@@ -37,19 +37,6 @@ local dontTPOnDeath = true
 
 if LocalPlayer.PlayerStats.Level.Value == 50 then while true do print("Level 50, Auto pres disabled") task.wait(9999999) end end
 
-if not LocalPlayer.PlayerGui:FindFirstChild("HUD") then
-    print("I FOUND IT")
-    local HUD = game:GetService("ReplicatedStorage").Objects.HUD:Clone()
-    HUD.Parent = LocalPlayer.PlayerGui
-end
-
-print("I DID FOUND IT, MAYBE IT WILL WORK?")
-RemoteEvent:FireServer("PressedPlay")
-
-if LocalPlayer.PlayerGui:FindFirstChild("LoadingScreen1") then
-    LocalPlayer.PlayerGui:FindFirstChild("LoadingScreen1"):Destroy()
-end
-
 if LocalPlayer.PlayerGui:FindFirstChild("LoadingScreen") then
     LocalPlayer.PlayerGui:FindFirstChild("LoadingScreen"):Destroy()
 end
